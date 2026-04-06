@@ -9,6 +9,7 @@ import StartflixPolicy from './pages/StartflixPolicy';
 import Blog from './pages/Blog';
 import Cripto from './pages/Cripto';
 import AppsEmAlta from './pages/AppsEmAlta';
+import NoticiaDetalhe from './pages/NoticiaDetalhe';
 
 function App() {
     return (
@@ -25,6 +26,7 @@ function App() {
                         <Route path="/blog" element={<Blog />} />
                         <Route path="/cripto" element={<Cripto />} />
                         <Route path="/apps" element={<AppsEmAlta />} />
+                        <Route path="/noticias/:slug" element={<NoticiaDetalhe />} />
                     </Routes>
                 </main>
                 <Footer />
