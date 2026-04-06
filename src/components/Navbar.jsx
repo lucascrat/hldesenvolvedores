@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Menu, X, Code2 } from 'lucide-react';
+import { Menu, X, Code2, Bitcoin, Smartphone } from 'lucide-react';
 import { useState } from 'react';
 
 export default function Navbar() {
@@ -10,7 +10,7 @@ export default function Navbar() {
             position: 'sticky',
             top: 0,
             zIndex: 50,
-            background: 'rgba(10, 10, 10, 0.8)',
+            background: 'rgba(10, 10, 10, 0.9)',
             backdropFilter: 'blur(10px)',
             borderBottom: '1px solid var(--border)'
         }}>
@@ -26,12 +26,17 @@ export default function Navbar() {
                 </Link>
 
                 {/* Desktop Menu */}
-                <div style={{ display: 'flex', gap: '2rem' }} className="desktop-menu">
+                <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'center' }} className="desktop-menu">
                     <Link to="/">Início</Link>
                     <a href="/#portfolio">Portfólio</a>
                     <Link to="/blog">Blog</Link>
+                    <Link to="/cripto" style={{ display: 'flex', alignItems: 'center', gap: '0.3rem' }}>
+                        <Bitcoin size={15} color="#f7931a" /> Cripto
+                    </Link>
+                    <Link to="/apps" style={{ display: 'flex', alignItems: 'center', gap: '0.3rem' }}>
+                        <Smartphone size={15} color="var(--accent)" /> Apps
+                    </Link>
                     <a href="/#contact">Contato</a>
-                    <Link to="/policy">ChegoJá Policy</Link>
                 </div>
 
                 {/* Mobile Toggle */}
@@ -56,13 +61,18 @@ export default function Navbar() {
                     borderBottom: '1px solid var(--border)',
                     display: 'flex',
                     flexDirection: 'column',
-                    gap: '1rem'
+                    gap: '1.25rem'
                 }}>
                     <Link to="/" onClick={() => setIsOpen(false)}>Início</Link>
                     <a href="/#portfolio" onClick={() => setIsOpen(false)}>Portfólio</a>
                     <Link to="/blog" onClick={() => setIsOpen(false)}>Blog</Link>
+                    <Link to="/cripto" onClick={() => setIsOpen(false)} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                        <Bitcoin size={16} color="#f7931a" /> Cripto
+                    </Link>
+                    <Link to="/apps" onClick={() => setIsOpen(false)} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                        <Smartphone size={16} color="var(--accent)" /> Apps em Alta
+                    </Link>
                     <a href="/#contact" onClick={() => setIsOpen(false)}>Contato</a>
-                    <Link to="/policy" onClick={() => setIsOpen(false)}>ChegoJá Policy</Link>
                 </div>
             )}
 

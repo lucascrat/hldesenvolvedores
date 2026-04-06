@@ -7,6 +7,8 @@ import Terms from './pages/Terms';
 import Privacy from './pages/Privacy';
 import StartflixPolicy from './pages/StartflixPolicy';
 import Blog from './pages/Blog';
+import Cripto from './pages/Cripto';
+import AppsEmAlta from './pages/AppsEmAlta';
 
 function App() {
     return (
@@ -21,6 +23,8 @@ function App() {
                         <Route path="/terms" element={<Terms />} />
                         <Route path="/privacy" element={<Privacy />} />
                         <Route path="/blog" element={<Blog />} />
+                        <Route path="/cripto" element={<Cripto />} />
+                        <Route path="/apps" element={<AppsEmAlta />} />
                     </Routes>
                 </main>
                 <Footer />
