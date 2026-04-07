@@ -1,7 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import CookieBanner from './components/CookieBanner';
 import Home from './pages/Home';
+import Sobre from './pages/Sobre';
+import Contato from './pages/Contato';
 import ChegoJaPolicy from './pages/ChegoJaPolicy';
 import Terms from './pages/Terms';
 import Privacy from './pages/Privacy';
@@ -19,6 +22,8 @@ function App() {
                 <main style={{ flex: 1 }}>
                     <Routes>
                         <Route path="/" element={<Home />} />
+                        <Route path="/sobre" element={<Sobre />} />
+                        <Route path="/contato" element={<Contato />} />
                         <Route path="/policy" element={<ChegoJaPolicy />} />
                         <Route path="/startflix-policy" element={<StartflixPolicy />} />
                         <Route path="/terms" element={<Terms />} />
@@ -30,6 +35,7 @@ function App() {
                     </Routes>
                 </main>
                 <Footer />
+                <CookieBanner />
             </div>
         </Router>
     );
