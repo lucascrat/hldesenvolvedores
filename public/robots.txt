@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Bloquear pastas de sistema desnecessárias
+Disallow: /src/
+Disallow: /node_modules/
+
+# Sitemap
+Sitemap: https://hldesenvolvedor.vercel.app/sitemap.xml
+
+# Google AdSense
+User-agent: Mediapartners-Google
+Allow: /
